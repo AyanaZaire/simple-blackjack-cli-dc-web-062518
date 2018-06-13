@@ -39,7 +39,7 @@ prompt_user
   if input == 'h'
     current_card_total += deal_card
   elsif input == 's'
-    card_total
+    current_card_total
   end
 end
 
