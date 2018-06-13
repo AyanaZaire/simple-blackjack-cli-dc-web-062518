@@ -39,8 +39,22 @@ else invalid_command
   return current_card_total
 end
 
+prompt_user
+  input = get_user_input
+  until input == 'h' || input == 's'
+    invalid_command
+    prompt_user
+    input = get_user_input
+  end
+  if input == 'h'
+    card_total += deal_card
+  elsif input == 's'
+    card_total
+  end
+end
+
 def invalid_command
-  # code invalid_command here
+  puts "Please enter a valid command"
 end
 
 #####################################################
